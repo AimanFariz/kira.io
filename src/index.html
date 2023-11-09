@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kira.io</title>
+    
+    <link href="/dist/output.css" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- navigation bar -->
+    <nav>
+
+    </nav>
+    <!-- Word Counter -->
+    <div class="container-1">
+        <h1 class="text-center text-lg text-blue-700">Word Counter</h1>
+        <div class="flex flex-col">
+            <label for="insert" class="text-center">Enter your text here:</label>
+            <textarea name="insert" id="insert" cols="50" rows="30" class=" border h-10 border-black"></textarea>
+        </label>
+        <div class="flex flex-col  border-red-500 border">
+            <!-- number of characters -->
+            <p class="text-center">Characters: <span id = "char">0</span></p>
+            <!-- number of words -->
+            <p class="text-center">Words: <span id="words">0</span></p>
+        </div>
+        
+        <!-- Keyword index (%) -->
+        <!-- <div>
+            <h2>Keyword Density:</h2>
+            <p id = "density"></p>
+        </div> -->
+        </div>
+    </div>
+    <!-- Push Counter -->
+    <div class="container-1" id="container2">
+        <div class="flex">
+            <h1 class="text-center text-lg text-blue-700">Push Counter</h1>
+        </div>
+        <label id="countLabel" class="text-lg">0</label>
+        <div class="flex gap-5">
+            <button id="decreasebtn" class="push">-</button>
+            <button id="resetbtn" class="push">Reset</button>
+            <button id="increasebtn" class="btn-primary">+</button>
+        </div>
+      </div>
+
+    <!-- Pythagorean Theorem Visualizer and Calculator -->
+    <div class="container-1" id="container1">
+      <h1 class="text-center text-lg text-blue-700">Know Your Pythagorean</h1>
+      <label class="text-xl" id="LabelA">Side A:</label>
+      <input type="number" id ="inputA" class="border border-emerald-600">
+      <label class="text-xl" id="LabelB"> Side B:</label>
+      <input type="number" id="inputB" class="border border-emerald-600">
+      <button type="button"  id="submitbtn" class="btn-primary">Submit</button>
+      <label class="text-xl" id="LabelC"> Side C:</label>
+        <label id="Area" class="text-xl">Area: </label>
+    </div>
+
+<!-- Footer -->
+<footer class="w-4/5 mx-auto p-7 mt-3">
+    <h5 class="text-center">@2023 Aiman Fariz | Made with Tailwind CSS</h5>
+</footer>
+</body>
+</html>

@@ -88,7 +88,7 @@ document.getElementById('evaluate-1d-arr').onclick=function(){
   var numbersArray = arrayInput.split(/[ ,]+/)
   var sum = 0
   var average = 0
-  var count = 0
+  var c = 0
   max = numbersArray[0]
   min = numbersArray[0]
   for (var i = 0; i < numbersArray.length; i++) {
@@ -96,7 +96,7 @@ document.getElementById('evaluate-1d-arr').onclick=function(){
 
     if (!isNaN(number)) {
       sum+=number
-      count++
+      c++
       if(number>max){
         max = number
       }
@@ -106,7 +106,7 @@ document.getElementById('evaluate-1d-arr').onclick=function(){
     } else {
       console.log('Error');
     }
-    average = (sum/count).toFixed(4)
+    average = (sum/c).toFixed(4)
     document.getElementById('out-sum').innerText = sum;
     document.getElementById('out-avg').innerText = average;
     document.getElementById('out-min').innerText = min;

@@ -41,13 +41,11 @@ window.onload  = function(){
       }
     
     //Pythagorean Theorem
-
-let a;
+document.getElementById("submitbtn").onclick = function(){
+  let a;
 let b;
 let c;
 let area;
-
-document.getElementById("submitbtn").onclick = function(){
   a = document.getElementById('inputA').value
   b = document.getElementById('inputB').value
   c = Math.sqrt(Math.pow(a,2) + Math.pow(b,2)).toFixed(2);
@@ -84,6 +82,7 @@ document.getElementById('compare-date').onclick=function() {
 
   document.getElementById("result").innerText = resultMessage;
 }
+// 1D Array Calculator
 document.getElementById('evaluate-1d-arr').onclick=function(){
   var arrayInput = document.getElementById('1d-arr-in').value
   var numbersArray = arrayInput.split(/[ ,]+/)

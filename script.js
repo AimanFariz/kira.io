@@ -4,8 +4,7 @@ window.onload  = function(){
     const input = document.getElementById("insert")
     const charOutput = document.getElementById("char")
     const wordsOutput = document.getElementById("words")
-
-    const inputContent = input.value
+    // const inputContent = input.value
     input.addEventListener("input", function () {
         // Get the text content from the <textarea>
         const text = input.value;
@@ -135,6 +134,44 @@ document.getElementById('evaluate-1d-arr').onclick=function(){
         document.getElementById("out-mod").innerText = "No mode found.";
       }
 }
+
+
+}
+let displayValue = '';
+let calculated = false;
+
+function appendValue(value) {
+    if (calculated) {
+        // If a calculation has been performed, clicking on numbers will clear the display
+        displayValue = '';
+        calculated = false;
+    }
+
+    displayValue += value;
+    updateDisplay();
 }
 
+function clearDisplay() {
+    displayValue = '';
+    updateDisplay();
+}
 
+function calculate() {
+    try {
+        displayValue = evaluateExpression(displayValue).toString();
+        calculated = true;
+        updateDisplay();
+    } catch (error) {
+        displayValue = 'Error';
+        calculated = true;
+        updateDisplay();
+    }
+}
+
+function evaluateExpression(expression) {
+    return Function(`'use strict'; return (${expression})`)();
+}
+
+function updateDisplay() {
+    document.getElementById('display').value = displayValue;
+}

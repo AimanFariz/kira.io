@@ -36,7 +36,7 @@
 
 /* CUSTOM 
 
-CUSTOM */
+START */
 .container-1{
   width: 80%;
   display: flex;
@@ -52,13 +52,21 @@ CUSTOM */
     margin-top: 8px;
     background: rgb(20, 230, 230);
     font-size: 11px;
-    border: 1px solid red;
     color: rgb(43, 28, 28);
     cursor: pointer;
     border-radius: 8px;
     
 }
-
+.buttons {
+  display: grid;
+  width: 50%;
+  border: 1px solid red;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3px;
+}
+.buttons button:nth-child(17) {
+  grid-column: span 3; /* Make the "=" button span all 4 columns */
+}
 html {
   line-height: 1.5;
   /* 1 */
@@ -76,7 +84,11 @@ html {
   font-variation-settings: normal;
   /* 6 */
 }
-
+.display-space{
+  border: 1px solid black;
+  border-radius: 5px;
+}
+/* CUSTOM END */
 /*
 1. Remove the margin in all browsers.
 2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.

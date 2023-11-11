@@ -71,11 +71,11 @@
         <div class="flex flex-row p-7 gap-5">
             <div class="flex flex-col">
                 <label for="startDate">Pick a date:</label>
-                <input type="date" name="startDate" id="startDate">
+                <input type="date" name="startDate" id="startDate" class="push">
             </div>
             <div class="flex flex-col">
                 <label for="endDate">Date to compare:</label>
-                <input type="date" name="endDate" id="endDate">
+                <input type="date" name="endDate" id="endDate" class="push">
             </div>
             
         </div>
@@ -86,10 +86,10 @@
         
     </div>
 
-    <!-- Array Calculator -->
+    <!-- 1D Array Calculator -->
     <div class="container-1">
         <h1 class="text-center text-lg text-blue-700">1D Array Calculator</h1>
-        <label for="1d-arr-in">Enter an array of space-separated numbers: </label>
+        <label for="1d-arr-in">Enter a set of numbers: </label>
         <input type="text" name="1d-arr-in" id="1d-arr-in" class="border border-red-500">
         <button class="push" id="evaluate-1d-arr">Evaluate</button>
         <p >Sum: <span id="out-sum"></span></p>
@@ -97,6 +97,32 @@
         <p >Mode: <span id="out-mod"></span></p>
         <p>Max: <span id="out-max"></span></p>
         <p>Min: <span id="out-min"></span></p>
+    </div>
+
+    <!-- Basic Calculator -->
+    <div class="container-1">
+        <h1 class="text-center text-lg text-blue-700">Basic Calculator</h1>
+        <p class="text-center italic">Disclaimer: For now, user must enter input by clicking on the buttons! Typing inputs directly into the box will generate error!</p>
+        <input type="text" id="display" class="display-space" >
+    <div class="buttons">
+        <button onclick="clearDisplay()" class="push">C</button>
+        <button onclick="appendValue('8')" class="push">8</button>
+        <button onclick="appendValue('7')" class="push">7</button>
+        <button onclick="appendValue('9')" class="push">9</button>
+        <button onclick="appendValue('/')" class="push">/</button>
+        <button onclick="appendValue('4')" class="push">4</button>
+        <button onclick="appendValue('5')" class="push">5</button>
+        <button onclick="appendValue('6')" class="push">6</button>
+        <button onclick="appendValue('*')" class="push">*</button>
+        <button onclick="appendValue('1')" class="push">1</button>
+        <button onclick="appendValue('2')" class="push">2</button>
+        <button onclick="appendValue('3')" class="push">3</button>
+        <button onclick="appendValue('-')" class="push">-</button>
+        <button onclick="appendValue('0')" class="push">0</button>
+        <button onclick="appendValue('.')" class="push">.</button>
+        <button onclick="appendValue('+')" class="push">+</button>
+        <button onclick="calculate()" class="push">=</button>
+    </div>
     </div>
 
 <!-- Footer -->
